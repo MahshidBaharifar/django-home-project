@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: rgb(255, 111, 0, 0.5);
+}
+
+.navbar {
+    background-color: rgb(251, 149, 32, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: rgb(21, 255, 0);
+}
+
+.book-entry {
+    margin-bottom: 20px;
+}
+.book-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

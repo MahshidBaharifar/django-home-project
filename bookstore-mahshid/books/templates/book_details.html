@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{review.book.title}}</h1>
+<h3>{{review.book.author}}</h3>
+<h4>{{review.book.description}}</h4>
+<p> review:{{ review.review_text }}</p>
+
+{% endblock %}

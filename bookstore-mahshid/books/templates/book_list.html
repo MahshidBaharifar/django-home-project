@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    {% for book in books %}
+    <div class="col-md-12 book-entry">
+        <div class="book-info">
+            <a href="{% url 'book-detail' book.id %}">{{ book.title }}</a>
+            <!-- <form method="post" action="{% url 'book-delete' book.pk %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <form method="get" action="{% url 'book-detail' book.pk %}">
+                <button type="submit" class="btn btn-primary">View Details</button>
+            </form> -->
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<form method="post" action="{% url 'book-create' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success">Create Book</button>
+</form>
+
+{% endblock %}
